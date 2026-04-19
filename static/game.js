@@ -17,10 +17,10 @@ const TRICK_SLOTS = { 0: 'south', 1: 'west', 2: 'north', 3: 'east' };
 document.addEventListener('DOMContentLoaded', init);
 
 async function init() {
-  document.getElementById('log-toggle').addEventListener('click', () => {
-    const panel = document.getElementById('log-panel');
-    const hidden = panel.classList.toggle('log-hidden');
-    document.getElementById('log-toggle').textContent = hidden ? 'Log ▸' : 'Log ▾';
+  document.getElementById('sidebar-toggle').addEventListener('click', () => {
+    const sidebar = document.getElementById('sidebar');
+    const hidden = sidebar.classList.toggle('sidebar-hidden');
+    document.getElementById('sidebar-toggle').textContent = hidden ? '▶' : '◀ Hide';
   });
 
   const savedId = localStorage.getItem('euchre_session_id');

@@ -728,30 +728,41 @@ body {
   position: relative;
 }
 
-#log-panel.log-hidden #log-entries {
-  display: none;
-}
-
-#log-panel.log-hidden {
-  max-height: 32px;
-  padding: 4px 20px;
-}
-
-#log-toggle {
+#sidebar-toggle {
+  display: block;
+  width: 100%;
   background: none;
   border: 1px solid #334155;
   color: #64748b;
   font-size: 11px;
-  padding: 1px 8px;
+  padding: 3px 8px;
   border-radius: 4px;
   cursor: pointer;
-  float: right;
-  margin-top: 1px;
+  margin-bottom: 6px;
+  text-align: center;
 }
 
-#log-toggle:hover {
+#sidebar-toggle:hover {
   color: #94a3b8;
   border-color: #64748b;
+}
+
+#sidebar.sidebar-hidden {
+  width: 28px;
+  overflow: hidden;
+  padding: 6px 4px;
+}
+
+#sidebar.sidebar-hidden #sidebar-trump,
+#sidebar.sidebar-hidden #sidebar-tricks {
+  display: none;
+}
+
+#sidebar.sidebar-hidden #sidebar-toggle {
+  writing-mode: vertical-rl;
+  width: 20px;
+  padding: 6px 2px;
+  font-size: 10px;
 }
 
 #log-entries {
