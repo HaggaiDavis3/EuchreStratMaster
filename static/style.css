@@ -20,6 +20,25 @@ body {
   width: 100%;
 }
 
+/* ===== Title Banner ===== */
+#title-banner {
+  background: #1a1a2e;
+  color: #e2c97e;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid #e2c97e33;
+}
+
+#title-byline {
+  font-size: 13px;
+  font-weight: normal;
+  color: #94a3b8;
+  margin-left: 10px;
+}
+
 /* ===== Scoreboard ===== */
 #scoreboard {
   display: flex;
