@@ -725,6 +725,33 @@ body {
   flex-shrink: 0;
   max-height: 52px;
   overflow: hidden;
+  position: relative;
+}
+
+#log-panel.log-hidden #log-entries {
+  display: none;
+}
+
+#log-panel.log-hidden {
+  max-height: 32px;
+  padding: 4px 20px;
+}
+
+#log-toggle {
+  background: none;
+  border: 1px solid #334155;
+  color: #64748b;
+  font-size: 11px;
+  padding: 1px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-top: 1px;
+}
+
+#log-toggle:hover {
+  color: #94a3b8;
+  border-color: #64748b;
 }
 
 #log-entries {

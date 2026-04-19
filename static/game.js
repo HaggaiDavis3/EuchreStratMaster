@@ -17,6 +17,12 @@ const TRICK_SLOTS = { 0: 'south', 1: 'west', 2: 'north', 3: 'east' };
 document.addEventListener('DOMContentLoaded', init);
 
 async function init() {
+  document.getElementById('log-toggle').addEventListener('click', () => {
+    const panel = document.getElementById('log-panel');
+    const hidden = panel.classList.toggle('log-hidden');
+    document.getElementById('log-toggle').textContent = hidden ? 'Log ▸' : 'Log ▾';
+  });
+
   const savedId = localStorage.getItem('euchre_session_id');
   if (savedId) {
     try {
