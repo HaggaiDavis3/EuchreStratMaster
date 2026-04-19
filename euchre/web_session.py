@@ -565,7 +565,8 @@ class WebGameSession:
         self.played_cards.extend(self.current_trick)
         self.played_tricks.append(list(self.current_trick))
         self.trick_counts[team_of(winner)] += 1
-        self._log(f"{PLAYER_NAMES[winner]} wins the trick ({self.trick_counts[0]}–{self.trick_counts[1]})")
+        verb = "win" if winner == HUMAN_SEAT else "wins"
+        self._log(f"{PLAYER_NAMES[winner]} {verb} the trick ({self.trick_counts[0]}–{self.trick_counts[1]})")
 
         # Store for TRICK_COMPLETE display (don't clear current_trick yet)
         self.last_trick_plays = list(self.current_trick)

@@ -450,7 +450,8 @@ function renderTrickCompletePanel(panel, s) {
   if (!lt) return;
 
   const box = el('div', 'trick-explanation');
-  box.appendChild(el('div', 'winner-label', `${lt.winner_name} wins the trick`));
+  const trickVerb = lt.winner_name === 'You' ? 'win' : 'wins';
+  box.appendChild(el('div', 'winner-label', `${lt.winner_name} ${trickVerb} the trick`));
   box.appendChild(el('div', '', lt.explanation));
   panel.appendChild(box);
 
@@ -652,7 +653,8 @@ function renderSidebarTricks(s) {
 
     const header = el('div', 'sidebar-trick-header');
     header.appendChild(el('span', 'sidebar-trick-num', `Trick ${trick.trick_num + 1}`));
-    header.appendChild(el('span', 'sidebar-trick-winner', `${trick.winner_name} wins`));
+    const verb = trick.winner_name === 'You' ? 'win' : 'wins';
+    header.appendChild(el('span', 'sidebar-trick-winner', `${trick.winner_name} ${verb}`));
     trickEl.appendChild(header);
 
     const plays = el('div', 'sidebar-trick-plays');
