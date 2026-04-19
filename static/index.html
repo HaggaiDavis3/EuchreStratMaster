@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Euchre StratMaster</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div id="app">
+    <header id="scoreboard">
+      <div id="score-team0" class="score-block"></div>
+      <div id="trump-display" class="trump-block"></div>
+      <div id="score-team1" class="score-block"></div>
+    </header>
+
+    <div id="content-area">
+    <aside id="sidebar">
+      <div id="sidebar-trump"></div>
+      <div id="sidebar-tricks"></div>
+    </aside>
+
+    <main id="table">
+      <div id="seat-north" class="seat seat-north">
+        <div class="seat-label">North <span class="partner-badge">(partner)</span></div>
+        <div class="card-row" id="north-cards"></div>
+      </div>
+
+      <div class="middle-row">
+        <div id="seat-west" class="seat seat-side seat-west">
+          <div class="seat-label">West</div>
+          <div class="card-row" id="west-cards"></div>
+        </div>
+
+        <div id="trick-area">
+          <div id="trick-north" class="trick-slot trick-slot-north"></div>
+          <div class="trick-middle-row">
+            <div id="trick-west"  class="trick-slot trick-slot-west"></div>
+            <div id="trick-center" class="trick-center-label"></div>
+            <div id="trick-east"  class="trick-slot trick-slot-east"></div>
+          </div>
+          <div id="trick-south" class="trick-slot trick-slot-south"></div>
+        </div>
+
+        <div id="seat-east" class="seat seat-side seat-east">
+          <div class="seat-label">East</div>
+          <div class="card-row" id="east-cards"></div>
+        </div>
+      </div>
+
+      <div id="going-alone-notice"></div>
+
+      <div id="seat-south" class="seat seat-south">
+        <div class="seat-label">You (South)</div>
+        <div class="card-row" id="south-cards"></div>
+      </div>
+    </main>
+    </div><!-- /content-area -->
+
+    <aside id="action-panel"></aside>
+
+    <section id="log-panel">
+      <div id="log-entries"></div>
+    </section>
+  </div>
+
+  <script src="/static/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip --version)",
+      "Bash(python -c \"import curses; print\\('curses available'\\)\")",
+      "Bash(python -c \"import colorama; print\\('colorama available'\\)\")",
+      "Bash(python -c \"import textwrap, collections, dataclasses, enum, typing, random, copy, itertools; print\\('stdlib ok'\\)\")",
+      "Bash(python -c \"import os, sys, shutil; print\\('os ok'\\)\")",
+      "Bash(python main.py --no-color)",
+      "Bash(pip install *)",
+      "Bash(python -m uvicorn server:app --port 8000)",
+      "Bash(curl -s -X POST http://localhost:8000/api/new-game)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('Phase:', d['phase']\\); print\\('Hand:', len\\(d['your_hand']\\), 'cards'\\); print\\('Server OK'\\)\")",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(python *)",
+      "Bash(pip show *)"
+    ]
+  }
+}
