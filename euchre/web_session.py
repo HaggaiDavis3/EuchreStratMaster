@@ -298,7 +298,7 @@ class WebGameSession:
     def _process_bid_r1(self, choice: str, alone: bool) -> None:
         self._record_bid(round=1, seat=HUMAN_SEAT, choice=choice, alone=alone)
         if choice == "order":
-            self._log("You order up")
+            self._log(f"You order up the {self.upcard.display(True)}")
             self._set_trump(self.upcard.suit, HUMAN_SEAT, alone)
             self._handle_dealer_pickup()
             if self.phase != Phase.DISCARDING:
@@ -449,7 +449,7 @@ class WebGameSession:
         self._record_bid(round=1, seat=seat, choice=choice, alone=alone)
         if choice == "order":
             alone_str = " and goes alone!" if alone else ""
-            self._log(f"{PLAYER_NAMES[seat]} orders up{alone_str}")
+            self._log(f"{PLAYER_NAMES[seat]} orders up the {self.upcard.display(True)}{alone_str}")
             self._set_trump(self.upcard.suit, seat, alone)
             self._handle_dealer_pickup()
         else:
